@@ -194,11 +194,11 @@ function resetFunction() {
 }
 // ваше событие здесь!!!
 if (/Android|webOS|iPhone|iPad|iPod|BlackBarry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-    next[0].ontouchstart = nextFunction;
+    next[0].ontouchstart = nextFunction; next[0].onclick = () => { return false;}
 }
 if (/Android|webOS|iPhone|iPad|iPod|BlackBarry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-    prev[0].ontouchstart = prevFunction;
+    prev[0].ontouchstart = prevFunction; prev[0].onclick = () => { return false;}
 }
 if (/Android|webOS|iPhone|iPad|iPod|BlackBarry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-    res.ontouchstart = resetFunction;
+    res.ontouchstart = resetFunction; res.onclick = () => { return false;}
 }
